@@ -89,12 +89,22 @@ Setup the Sample:
 
 
 Useful Tools for Monitoring and Debugging:
-[https://azure.microsoft.com/en-us/blog/microsoft-azure-storage-explorer-preview-january-update-and-roadmap/](https://azure.microsoft.com/en-us/blog/microsoft-azure-storage-explorer-preview-january-update-and-roadmap/ "Cloud Storage Explorer")
-[https://github.com/Azure/azure-batch-samples/tree/master/CSharp/BatchExplorer](https://github.com/Azure/azure-batch-samples/tree/master/CSharp/BatchExplorer "Azure Batch Explorer")
-[https://github.com/Azure/azure-iot-sdks/blob/master/tools/DeviceExplorer/doc/how_to_use_device_explorer.md](https://github.com/Azure/azure-iot-sdks/blob/master/tools/DeviceExplorer/doc/how_to_use_device_explorer.md "IoT Hub Device Explorer")
-[https://github.com/uneidel/IOTSASTokenGenerator](https://github.com/uneidel/IOTSASTokenGenerator "SAS Token Generator / Export Import Tool")
+* [https://azure.microsoft.com/en-us/blog/microsoft-azure-storage-explorer-preview-january-update-and-roadmap/](https://azure.microsoft.com/en-us/blog/microsoft-azure-storage-explorer-preview-january-update-and-roadmap/ "Cloud Storage Explorer")
+* [https://github.com/Azure/azure-batch-samples/tree/master/CSharp/BatchExplorer](https://github.com/Azure/azure-batch-samples/tree/master/CSharp/BatchExplorer "Azure Batch Explorer")
+* [https://github.com/Azure/azure-iot-sdks/blob/master/tools/DeviceExplorer/doc/how_to_use_device_explorer.md](https://github.com/Azure/azure-iot-sdks/blob/master/tools/DeviceExplorer/doc/how_to_use_device_explorer.md "IoT Hub Device Explorer")
+* [https://github.com/uneidel/IOTSASTokenGenerator](https://github.com/uneidel/IOTSASTokenGenerator "SAS Token Generator / Export Import Tool")
 
 Note: Document DB is also included in this Sample but documentDB Activity currently does not allow upserts.
 Note: Custom Activity also includes REST Version of exporting Identities (only up to 1000)
 
 5/12/2016 5:46:02 PM 
+
+The MIT License (MIT)
+
+Copyright (c)2016 / uneidel
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
