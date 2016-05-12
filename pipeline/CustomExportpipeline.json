@@ -1,0 +1,52 @@
+{
+    "name": "IoTHubIdentityExtractor",
+    "properties": {
+        "description": "Extracts all Identities from a given IotHub",
+        "activities": [
+            {
+                "type": "DotNetActivity",
+                "typeProperties": {
+                    "assemblyName": "IoThub.dll",
+                    "entryPoint": "Iot.IOTHubExportActivity",
+                    "packageLinkedService": "AzureStorageLinkedService",
+                    "packageFile": "adf/Debug.zip",
+                    "extendedProperties": {
+                        "uri": "<>",
+                        "iothubname": "<>",
+						"key":"<>",
+						"policyName":"iothubowner",
+                        "dataStorageAccountName": "<>",
+                        "dataStorageAccountKey": "<>",
+                        "dataStorageContainer": "devices"
+                    }
+                },
+                "Inputs": [
+                {
+                    "Name": "InputDataset"
+                }
+                ],
+                "outputs": [
+                    {
+                        "name": "IdentityBlobTableDataSet"
+                    }
+                ],
+                "policy": {
+                    "executionPriorityOrder": "OldestFirst",
+                    "timeout": "00:02:00",
+                    "concurrency": 2,
+                    "retry": 2
+                },
+                "scheduler": {
+                    "frequency": "Hour",
+                    "interval": 1
+                },
+                "name": "DownloadIoTDeviceIdentities",
+                "description": "Download IoT Identities",
+                "linkedServiceName": "AzureBatchLinkedService"
+            }
+        ],
+        "start":"2016-05-12T00:00:00Z",
+    "end":"2016-05-13T00:00:00Z",
+        "isPaused": false
+    }
+}

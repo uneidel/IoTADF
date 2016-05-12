@@ -1,0 +1,33 @@
+{
+  "name": "IdentitiesDocumentDbTableOut",
+  "properties": {
+    "structure": [
+      {
+        "name": "Id",
+        "type": "String"
+      },
+      {
+        "name": "status",
+        "type": "String"
+      },
+      {
+        "name": "primaryKey",
+        "type": "String"
+      },
+      {
+        "name":"secondaryKey",
+        "type":"String"
+      }
+      
+    ],
+    "type": "DocumentDbCollection",
+    "linkedServiceName": "DocumentDbLinkedService",
+    "typeProperties": {
+      "collectionName": "iotdevices"
+    },
+    "availability": {
+      "frequency": "Hour",
+      "interval": 1
+    }
+  }
+}

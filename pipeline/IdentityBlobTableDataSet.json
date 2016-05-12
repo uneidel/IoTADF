@@ -1,0 +1,38 @@
+{
+  "name": "IdentityBlobTableDataSet",
+  "properties": {
+    "structure": [
+      {
+        "name": "Id",
+        "type": "String"
+      },
+      {
+        "name": "status",
+        "type": "String"
+      },
+      {
+        "name": "authentication.symmetricKey.primaryKey",
+        "type": "String"
+      },
+      {
+        "name": "authentication.symmetricKey.secondaryKey",
+        "type": "String"
+      }
+    ],
+    "type": "AzureBlob",
+    "linkedServiceName": "AzureStorageLinkedService",
+    "typeProperties": {
+      "fileName": "devices.txt",
+      "folderPath": "iothunbazure",
+      "format": {
+        "type": "JsonFormat"
+      }
+    },
+    "policy": {},
+    "availability": {
+      "frequency": "hour",
+      "interval": 1
+    }
+  }
+}
+

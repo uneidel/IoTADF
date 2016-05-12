@@ -1,0 +1,45 @@
+{  
+    "name":"SQLOutPipeline",
+    "properties":{  
+    "start":"2016-05-12T00:00:00Z",
+    "end":"2016-05-13T00:00:00Z",
+    "description":"pipeline for SQL to BLOB",
+    "activities":[  
+      {
+        "name": "AzureSQLtoBlob",
+        "description": "copy activity",
+        "type": "Copy",
+        "inputs": [
+          {
+            "name": "AzureSQLOutput"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "IdentityBlobOutTableDataSet"
+          }
+        ],
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "SqlReaderQuery": "SELECT ID,Status, primaryKey, secondaryKey from DeviceIdentities"
+          },
+          "sink": {
+            "type": "BlobSink"
+          }
+        },
+       "scheduler": {
+          "frequency": "Hour",
+          "interval": 1
+        },
+        "policy": {
+          "concurrency": 1,
+          "executionPriorityOrder": "OldestFirst",
+          "retry": 0,
+          "timeout": "01:00:00"
+        }
+      }
+     ]
+   }
+}
+

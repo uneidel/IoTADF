@@ -1,0 +1,38 @@
+{
+  "name": "BlobToDocDbPipeline",
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "BlobSource"
+          },
+          "sink": {
+            "type": "DocumentDbCollectionSink",
+            "nestingSeparator": ".",
+            "writeBatchSize": 2,
+            "writeBatchTimeout": "00:00:00"
+          },
+          "translator": {
+              "type": "TabularTranslator",
+              "ColumnMappings": "Id:id;Status:Status;primaryKey:authentication.symmetricKey.primaryKey;secondaryKey:authentication.symmetricKey.secondaryKey"
+          }
+        },
+        "inputs": [
+          {
+            "name": "IdentityBlobTableDataSet"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "IdentitiesDocumentDbTableOut"
+          }
+        ],
+        "name": "CopyFromBlobToDocDb"
+      }
+    ],
+   "start":"2016-05-01T00:00:00Z",
+    "end":"2016-05-02T00:00:00Z"
+  }
+}

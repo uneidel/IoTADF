@@ -1,0 +1,14 @@
+{
+  "name": "AzureSqlOutput",
+  "properties": {
+    "type": "AzureSqlTable",
+    "linkedServiceName": "AzureSqlLinkedService",
+    "typeProperties": {
+      "tableName": "DeviceIdentities"
+    },
+    "availability": {
+      "frequency": "Hour",
+      "interval": 1
+    }
+  }
+}

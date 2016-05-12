@@ -1,0 +1,39 @@
+{
+  "name": "IdentityBlobOutTableDataSet",
+  "properties": {
+    "structure": [
+      {
+        "name": "Id",
+        "type": "String"
+      },
+      {
+        "name": "status",
+        "type": "String"
+      },
+      {
+        "name": "authentication.symmetricKey.primaryKey",
+        "type": "String"
+      },
+      {
+        "name": "authentication.symmetricKey.secondaryKey",
+        "type": "String"
+      }
+    ],
+    "type": "AzureBlob",
+    "linkedServiceName": "AzureStorageLinkedService",
+    "typeProperties": {
+      "fileName": "devices.txt",
+      "folderPath": "<>",
+      "format": {
+        "type": "JsonFormat",
+        "nestingSeparator": "."
+      }
+    },
+    "policy": {},
+    "availability": {
+      "frequency": "hour",
+      "interval": 1
+    }
+  }
+}
+

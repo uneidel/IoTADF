@@ -1,0 +1,19 @@
+{
+        "name": "InputDataset",
+        "properties": {
+            "type": "AzureBlob",
+            "linkedServiceName": "AzureStorageLinkedService",
+            "typeProperties": {
+                "folderPath": "adf",
+                "format": {
+                    "type": "TextFormat"
+                }
+            },
+            "availability": {
+                "frequency": "Hour",
+                "interval": 1
+            },
+            "external": true,
+            "policy": {}
+        }
+    }
